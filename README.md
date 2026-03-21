@@ -1,11 +1,1 @@
-🚀 TaskFlow: Modern Task Management SystemTaskFlow is a high-performance, full-stack task management application designed to help teams organize, track, and conquer their projects. Built with Vite (React) and Node.js, it features a sleek, high-contrast dark mode interface for maximum productivity.✨ FeaturesUnified Dashboard: A high-level pulse of your workspace with real-time productivity metrics.Dynamic Kanban Board: Drag-and-drop workflow management with priority-coded task cards.Interactive Gantt Timeline: Visualize project milestones and task dependencies across weeks and months.Secure Authentication: Robust user registration and login flow with custom toast notifications for feedback.Project Workspaces: Organize tasks by specific projects (e.g., "Aura Mobile App," "Solstice CRM") with dedicated color-coded identities.Team Collaboration: Activity feeds to track updates from team members in real-time.🛠️ Tech StackFrontend: React, Vite, CSS Modules (Glassmorphism & Neon UI)Backend: Node.js, ExpressDevOps: Docker (Multi-stage builds) Notifications: React-Toastify📦 Getting StartedPrerequisitesNode.js (v18+) Docker (Optional)InstallationClone the repository:Bashgit clone https://github.com/YourUsername/Task-Project-Management-System.git
-cd Task-Project-Management-System
-Set up the Environment:
-Create a .env file in the root directory (refer to .env.example for required variables).Install Dependencies:Bash# Install Frontend
-cd frontend && npm install
 
-# Install Backend
-cd ../backend && npm install
-Running with DockerThis project utilizes a multi-stage Dockerfile to optimize production builds. It builds the frontend and serves it through the backend public folder.Bashdocker build -t task-management-system .
-docker run -p 3000:3000 task-management-system
-📁 Project Structurefrontend/: React source code, Vite configuration, and UI components.backend/: Node.js API, database schemas, and server-side logic.dist/: Production build output (ignored by Git).node_modules/: Project dependencies (ignored by Git and Docker).🛡️ Best PracticesIgnored Files: Sensitive data (.env) and build artifacts (dist/, build/) are excluded via .gitignore and .dockerignore.Production Ready: The Dockerfile sets NODE_ENV=production and exposes port 3000 for deployment.
