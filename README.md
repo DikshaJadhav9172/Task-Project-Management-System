@@ -65,7 +65,7 @@ https://task-and-project-management-system.onrender.com/api-docs
 
 * React.js
 * React Router
-* Custom CSS (no frameworks)
+* Custom CSS (no UI frameworks)
 * Lucide Icons
 * JWT authentication handling
 
@@ -79,6 +79,19 @@ https://task-and-project-management-system.onrender.com/api-docs
 * JWT Authentication
 * bcrypt
 * Swagger (API documentation)
+
+---
+
+## 🐳 Docker & Deployment (Bonus 🚀)
+
+* Application containerized using **Docker**
+* Includes `Dockerfile` and `.dockerignore`
+* Deployed on **Render using Docker container**
+* Ensures:
+
+  * Consistent environment
+  * Easy scalability
+  * Production-ready deployment
 
 ---
 
@@ -125,8 +138,7 @@ https://task-and-project-management-system.onrender.com/api-docs
 
 ## ⚠️ Environment Variables
 
-🚨 **Important:**
-`.env` files are **NOT included in the repository** for security reasons.
+🚨 `.env` files are ignored for security.
 
 ### Backend `.env`
 
@@ -209,15 +221,17 @@ npm run dev
 * JWT Authentication
 * bcrypt password hashing
 * Role-based access control
-* Environment variables protection
+* Environment variable protection
 
 ---
 
 ## 🚀 Deployment
 
-* Backend deployed on **Render**
-* Swagger available live
-* Docker support included
+* Dockerized application
+* Deployed on **Render using Docker**
+* Live API + Swagger available
+
+👉 https://task-and-project-management-system.onrender.com/api-docs
 
 ---
 
