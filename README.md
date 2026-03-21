@@ -223,7 +223,7 @@ npm run dev
 
 ## 👨‍💻 Author
 
-**Aditya Sadavare**
+**Diksha Jadhav**
 
 ---
 
