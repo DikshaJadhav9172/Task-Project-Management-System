@@ -1,340 +1,232 @@
-📌 Task & Project Management System
+# 🚀 Task & Project Management System (Full Stack)
 
-📖 Overview
+A complete **full-stack web application** for managing tasks, projects, users, and collaboration — built with **Node.js, Express, PostgreSQL, and React**.
 
-The Task & Project Management System is a web-based application designed to help teams efficiently organize, assign, and track project tasks. It enables structured workflow management, collaboration, and performance monitoring through dashboards.
+🔗 **Live Swagger API Docs:**
+https://task-and-project-management-system.onrender.com/api-docs
 
-The system supports multiple user roles and ensures secure access using authentication and authorization mechanisms.
+---
 
+## 📌 Features
 
-🎯 Business Objectives
+### 🔐 Authentication & Security
 
-1. Provide a centralized platform for project and task management
+* JWT-based Login & Register
+* Password hashing using **bcrypt**
+* Role-based authorization (Admin / Manager / User)
 
-2. Enable managers to assign and track tasks
+---
 
-3. Allow team members to update task progress and collaborate
+## 👑 Roles & Permissions
 
-4. Ensure secure role-based access control
+### 🛡️ Admin
 
-5. Deliver real-time insights via dashboards
+* View all users
+* Search & filter users
+* Update user roles
+* Delete users (cannot delete self)
+* Create, update, delete projects
+* Create, assign, and delete tasks
+* View all tasks
+* Access manager dashboard
 
+---
 
-👥 User Roles
+### 🧑‍💼 Manager
 
+* Create, update, delete projects
+* Create and assign tasks
+* View all tasks
+* Delete tasks
+* Access manager dashboard
 
-👤 Team Member (User)
+---
 
+### 👤 User
 
-1. Register and login
+* View only assigned tasks
+* Update task **status only**
+* Add comments on tasks
+* Access personal dashboard
 
-2. View assigned tasks
+---
 
-3. Update task status (Pending, In Progress, Completed)
+## 🖥️ Frontend (React)
 
-4. Add comments to tasks
+### ✨ Features
 
-5. View personal dashboard
+* Role-based UI (Admin / Manager / User)
+* Dashboard system
+* Task & project management UI
+* API integration with backend
+* Fully responsive design
 
+### 🎨 Tech Stack
 
-👨‍💼 Project Manager
+* React.js
+* React Router
+* Custom CSS (no frameworks)
+* Lucide Icons
+* JWT authentication handling
 
+---
 
-1. Create and manage projects
+## 🛠️ Backend Tech Stack
 
-2. Add users to projects
+* Node.js
+* Express.js
+* PostgreSQL
+* JWT Authentication
+* bcrypt
+* Swagger (API documentation)
 
-3. Create and assign tasks
+---
 
-4. Track project progress
+## 📂 Project Structure
 
-5. Monitor team performance
-
-
-🛠️ Admin
-
-1. Manage users and roles
-
-2. Monitor system usage
-
-3. View system-wide statistics
-
-4. Manage projects if required
-
-
-🚀 Features
-
-
-🔐 Authentication & Security
-
-
-1. Secure login and signup
-
-2. JWT-based authentication
-
-3. Password hashing
-
-4. Role-Based Access Control (RBAC)
-
-5. Token expiration handling
-
-
-📂 Project Management
-
-
-1. Create and manage projects
-
-2. Assign members
-
-3. Set project timelines
-
-4. Track project status (Planned, Active, Completed)
-
-
-✅ Task Management
-
-
-1. Create, update, delete tasks
-
-2. Assign tasks to users
-
-3. Set priorities (Low, Medium, High)
-
-4. Track status (Pending, In Progress, Completed)
-
-5. Set deadlines
-
-
-💬 Comment System
-
-
-1. Add comments on tasks
-
-2. View team discussions
-
-3. Timestamp tracking
-
-
-📊 Dashboard
-
-
-1. User Dashboard:
-
-a. Total assigned tasks
-
-b. Completed tasks
-
-c. Pending tasks
-
-2. Manager Dashboard:
-
-a. Project progress overview
-
-b. Task statistics
-
-c. Team performance insights
-
-
-🛠️ Tech Stack
-
-
-Frontend:
-
-1. React / Angular / Next.js
-
-2. HTML5, CSS3 (Custom CSS only, no frameworks)
-
-Backend:
-
-1. Node.js / NestJS / Django REST Framework
-
-Database:
-
-1. PostgreSQL
-
-Tools:
-
-1. Git & GitHub
-
-2. Postman
-
-3. Swagger / OpenAPI
-
-📁 Project Structure
-
-Task-Project-Management-System/
-
-│
-├── frontend/
-│   ├── components/
-│   ├── pages/
-│   ├── styles/
-│
+```bash
+.
 ├── backend/
+│   ├── .dist/
+│   ├── config/
 │   ├── controllers/
-│   ├── services/
+│   ├── docs/
+│   ├── middleware/
+│   ├── models/
 │   ├── repositories/
 │   ├── routes/
-│   ├── models/
+│   ├── services/
+│   ├── app.js
+│   ├── server.js
+│   ├── package.json
+│   └── .env (ignored)
 │
-├── database/
-│   └── schema.sql
+├── frontend/
+│   ├── dist/
+│   ├── src/
+│   │   ├── components/
+│   │   ├── context/
+│   │   ├── pages/
+│   │   ├── services/
+│   │   ├── App.css
+│   │   ├── index.css
+│   │   └── main.jsx
+│   ├── index.html
+│   ├── vite.config.js
+│   ├── package.json
+│   └── .env (ignored)
 │
-├── docs/
-│   └── API_Documentation.md
-│
-├── README.md
-└── package.json / requirements.txt
+├── Dockerfile
+├── .dockerignore
+├── .gitignore
+```
 
+---
 
-⚙️ Installation & Setup
+## ⚠️ Environment Variables
 
+🚨 **Important:**
+`.env` files are **NOT included in the repository** for security reasons.
 
-1️⃣ Clone the Repository
+### Backend `.env`
 
-git clone https://github.com/your-username/task-project-management-system.git
+```env
+PORT=5000
+NODE_ENV=development
 
-cd task-project-management-system
+DB_HOST=localhost
+DB_PORT=5432
+DB_USER=postgres
+DB_PASSWORD=yourpassword
+DB_NAME=task_management
 
-2️⃣ Install Dependencies
+JWT_SECRET=your_secret_key
+```
 
-For Node.js:
+### Frontend `.env`
 
+```env
+VITE_API_URL=http://localhost:5000
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/task-project-management.git
+cd task-project-management
+```
+
+---
+
+### 2. Backend Setup
+
+```bash
+cd backend
 npm install
-
-
-3️⃣ Database Setup
-
-1.Create PostgreSQL database
-
-2.Import schema from /database/schema.sql
-
-3.Update database credentials in config file
-
-4️⃣ Run the Application
-
-Frontend:
-
-npm start
-
-Backend:
-
 npm run dev
+```
 
+---
 
-🔌 API Documentation
+### 3. Frontend Setup
 
-1. APIs are documented using Swagger / OpenAPI
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-2. Postman collection is included
+---
 
-API groups:
+## 🌐 API Base URL
 
-1. Auth APIs
+* Local:
 
-2. Project APIs
+  ```
+  http://localhost:5000
+  ```
 
-3. Task APIs
+* Production:
 
-4. Admin APIs
+  ```
+  https://task-and-project-management-system.onrender.com
+  ```
 
-🧪 Development Process
+---
 
-1. Finalize Technology Stack
+## 📘 Swagger API Docs
 
-2. Design Database (ER Diagram + Schema)
+👉 https://task-and-project-management-system.onrender.com/api-docs
 
-3. Backend Development
+---
 
-4. API Documentation
+## 🔒 Security
 
-5. Frontend Development
+* JWT Authentication
+* bcrypt password hashing
+* Role-based access control
+* Environment variables protection
 
-6. Testing
+---
 
-7. Deployment (Optional: Docker)
+## 🚀 Deployment
 
-📐 Architecture & Design
+* Backend deployed on **Render**
+* Swagger available live
+* Docker support included
 
-1. Follows SOLID Principles
+---
 
-2. Single Responsibility Principle
+## 👨‍💻 Author
 
-3. Open/Closed Principle
+**Aditya Sadavare**
 
-4. Liskov Substitution Principle
+---
 
-5. Interface Segregation Principle
+## ⭐ Support
 
-6. Dependency Inversion Principle
-
-Uses:
-
-1. Service Layer Pattern
-
-2. Repository Pattern
-
-3. Clean Architecture
-
-⚡ Non-Functional Requirements
-
-1. Responsive UI
-
-2. Secure APIs
-
-3. Scalable architecture
-
-4. Optimized database queries
-
-🚫 Constraints
-
-1. No use of CSS frameworks like:
-
-a. Bootstrap
-
-b. Tailwind
-
-c. Material UI
-
-2. Only:
-
-a. Custom CSS
-
-b. CSS Modules
-
-c. SCSS
-
-🔮 Future Enhancements
-
-1. Real-time notifications
-
-2. Email integration
-
-3. Third-party integrations (Slack, Jira)
-
-4. Mobile application
-
-5. Activity logging
-
-🐳 Optional Features
-
-1. Docker containerization
-
-2. docker-compose setup
-
-🤝 Contributing
-
-1. Fork the repository
-
-2. Create a new branch
-
-3. Commit changes
-
-4. Submit a pull request
-
-👩‍💻 Author
-
-Diksha Jadhav
-
-Computer Science Engineer
-
+If you like this project, give it a ⭐ on GitHub!
