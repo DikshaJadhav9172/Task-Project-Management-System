@@ -1,4 +1,9 @@
 const swaggerJsdoc = require("swagger-jsdoc");
+const serverUrl =
+  process.env.NODE_ENV === "production"
+    ? "https://task-and-project-management-system.onrender.com"
+    : "http://localhost:5000";
+console.log(process.env.NODE_ENV);
 
 const options = {
   definition: {
@@ -28,10 +33,9 @@ Notes:
 - If you see **401**, login again and re-authorize (token missing/expired).
 - Some endpoints require roles (Manager/Admin/Admin).`,
     },
-    servers: [
+     servers: [
       {
-        url: "http://localhost:5000",
-        description: "Local server",
+        url: serverUrl,
       },
     ],
     components: {
