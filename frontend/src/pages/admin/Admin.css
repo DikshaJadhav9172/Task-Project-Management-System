@@ -1,0 +1,292 @@
+/* =========================
+   CONTAINER
+========================= */
+.admin-container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Page title */
+.admin-container h1 {
+  margin: 0 0 1.25rem;
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+
+/* =========================
+   CONTROLS (SEARCH + FILTER)
+========================= */
+.admin-controls {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  padding: 0.5rem 0.7rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-size: 0.85rem;
+  min-width: 220px;
+  background: var(--surface);
+  color: var(--text);
+  transition: all 0.15s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.15);
+}
+
+.role-filter {
+  padding: 0.5rem 0.65rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  font-size: 0.85rem;
+  background: var(--surface);
+  color: var(--text);
+  transition: all 0.15s ease;
+}
+
+.role-filter:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+
+/* =========================
+   TABLE WRAPPER
+========================= */
+.users-table-container {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  position: relative;
+}
+
+/* 🔥 ADD THIS (SCROLL SLIDER) */
+.table-scroll {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Scrollbar */
+.table-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.table-scroll::-webkit-scrollbar-thumb {
+  background: #cbd5f5;
+  border-radius: 10px;
+}
+
+/* Optional swipe hint */
+.table-scroll::after {
+  content: "← Swipe →";
+  position: absolute;
+  right: 12px;
+  top: 10px;
+  font-size: 11px;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+
+/* =========================
+   TABLE
+========================= */
+.users-table {
+  width: 100%;
+  min-width: 720px; /* 🔥 forces horizontal scroll */
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.users-table thead {
+  background: transparent;
+}
+
+/* Sticky header (optional but clean) */
+.users-table thead th {
+  position: sticky;
+  top: 0;
+  background: var(--surface);
+  z-index: 2;
+}
+
+.users-table th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.users-table td {
+  padding: 0.85rem 1rem;
+  font-size: 0.92rem;
+  color: var(--text);
+  border-top: 1px solid var(--border);
+  white-space: nowrap; /* 🔥 prevents breaking */
+}
+
+/* Row hover */
+.users-table tbody tr:hover {
+  background: rgba(79, 70, 229, 0.03);
+}
+
+
+/* =========================
+   ROLE BADGES
+========================= */
+.role-badge {
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.role-user {
+  background: rgba(37, 99, 235, 0.12);
+  color: #2563eb;
+}
+
+.role-manager {
+  background: rgba(245, 158, 11, 0.12);
+  color: #d97706;
+}
+
+.role-admin {
+  background: rgba(220, 38, 38, 0.12);
+  color: #dc2626;
+}
+
+
+/* =========================
+   SELECT INPUT
+========================= */
+.users-table select {
+  padding: 0.45rem 0.6rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  transition: all 0.15s ease;
+}
+
+.users-table select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+.action-buttons-inline {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.btn-edit,
+.btn-save,
+.btn-cancel,
+.btn-delete {
+  padding: 0.4rem 0.65rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+/* Hover */
+.btn-edit:hover,
+.btn-save:hover,
+.btn-cancel:hover,
+.btn-delete:hover {
+  background: var(--surface-2);
+}
+
+/* Variants */
+.btn-edit {
+  color: var(--primary);
+}
+
+.btn-save {
+  color: var(--success);
+}
+
+.btn-cancel {
+  color: var(--muted);
+}
+
+/* Delete */
+.btn-delete {
+  color: #dc2626;
+  border: 1px solid rgba(220, 38, 38, 0.25);
+  background: rgba(220, 38, 38, 0.08);
+}
+
+.btn-delete:hover {
+  background: rgba(220, 38, 38, 0.15);
+  border-color: rgba(220, 38, 38, 0.4);
+}
+
+
+/* =========================
+   EMPTY STATE
+========================= */
+.empty-state {
+  text-align: center;
+  padding: 2.5rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+
+/* =========================
+   SPINNER
+========================= */
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid rgba(0,0,0,0.08);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin: 2rem auto;
+}
+
+.you-badge {
+  font-size: 0.7rem;
+  color: var(--primary);
+  margin-left: 4px;
+  font-weight: 600;
+}
+
+.disabled-look {
+  opacity: 0.5;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

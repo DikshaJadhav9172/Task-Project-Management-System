@@ -1,0 +1,238 @@
+.projects-container,
+.create-project-container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Header */
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.projects-header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+/* Subtitle */
+.project-subtitle {
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.2rem;
+}
+
+/* Card */
+.project-card {
+  position: relative;
+  cursor: pointer;
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+
+  padding: 1.2rem;
+  box-shadow: var(--shadow-sm);
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+
+  transition: all 0.18s ease;
+}
+
+/* Hover */
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(79, 70, 229, 0.2);
+}
+
+/* Click feedback */
+.project-card:active {
+  transform: scale(0.98);
+}
+
+/* Keyboard focus (🔥 important) */
+.project-card:focus-visible {
+  outline: none;
+  box-shadow: var(--ring);
+}
+
+/* Header with arrow */
+.project-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Arrow */
+.card-arrow {
+  color: var(--muted);
+  transition: all 0.2s ease;
+}
+
+/* Hover animation */
+.project-card:hover .card-arrow {
+  transform: translateX(4px);
+  color: var(--primary);
+}
+
+/* Title */
+.project-card h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Description */
+.project-description {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.5;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Meta */
+.project-meta {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.project-meta-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Dates */
+.project-dates {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  padding-top: 0.6rem;
+}
+
+/* Form card */
+.form-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Form */
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* Actions */
+.form-actions {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+/* Progress */
+.project-progress {
+  margin-top: 1.2rem;
+  padding: 1.2rem;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.project-progress-title {
+  font-weight: 600;
+}
+
+.project-progress-subtitle {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.project-progress-pct {
+  font-weight: 700;
+}
+
+.project-progress-bar {
+  height: 8px;
+  margin-top: 0.7rem;
+  background: rgba(0,0,0,0.08);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.project-progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.project-progress-legend {
+  margin-top: 0.7rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+/* Task cards */
+.task-card {
+  cursor: pointer;
+}
+
+.task-card:active {
+  transform: scale(0.98);
+}
+
+/* Empty */
+.empty-state {
+  text-align: center;
+  padding: 1.8rem;
+  border-radius: 14px;
+  border: 1px dashed var(--border);
+  color: var(--muted);
+}
+
+/* Spinner */
+.spinner {
+  width: 38px;
+  height: 38px;
+  border: 3px solid rgba(0,0,0,0.08);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin: 2rem auto;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+

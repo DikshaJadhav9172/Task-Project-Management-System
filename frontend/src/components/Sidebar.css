@@ -1,0 +1,144 @@
+.sidebar {
+  width: 240px;
+  position: fixed;
+  top: 64px;
+  left: 0;
+  height: calc(100vh - 64px);
+
+  background: #0f172a; /* 🔥 DARK SIDEBAR */
+  color: #cbd5f5;
+
+  border-right: 1px solid rgba(255,255,255,0.06);
+  padding: 1rem 0.6rem;
+  overflow-y: auto;
+  z-index: 90;
+}
+
+/* Nav layout */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* Section */
+.nav-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+/* Section title */
+.nav-title {
+  margin: 0.4rem 0.75rem;
+  color: rgba(203, 213, 225, 0.5);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* Links */
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+
+  padding: 0.7rem 0.8rem;
+  border-radius: 10px;
+
+  color: #cbd5f5;
+  font-weight: 600;
+  font-size: 0.9rem;
+
+  transition: all 0.15s ease;
+}
+
+/* Hover */
+.nav-link:hover {
+  background: rgba(255,255,255,0.06);
+  color: #fff;
+}
+
+/* Active (🔥 like your reference UI) */
+.nav-link.active {
+  background: var(--primary);
+  color: #fff;
+
+  box-shadow: 0 6px 14px rgba(79, 70, 229, 0.25);
+}
+
+/* Optional: icon spacing fix */
+.nav-link span {
+  display: inline-flex;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 200px;
+  }
+}
+
+* 🔥 Fix horizontal scrollbar height */
+.sidebar-nav {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(255,255,255,0.2) transparent;
+}
+
+/* Chrome / Edge / Safari */
+.sidebar-nav::-webkit-scrollbar {
+  height: 5px; /* 🔥 reduce thickness */
+}
+
+.sidebar-nav::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.25);
+  border-radius: 10px;
+}
+
+/* Optional: hide until hover (super clean) */
+.sidebar-nav::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,255,255,0.4);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .sidebar {
+    position: sticky;
+    top: 64px;
+    width: 100%;
+    height: auto;
+
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(10px);
+
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+
+    padding: 0.5rem;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+    gap: 0.5rem;
+    overflow-x: auto;
+  }
+
+  .nav-section {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .nav-title {
+    display: none;
+  }
+
+  .nav-link {
+    white-space: nowrap;
+    background: rgba(255,255,255,0.05);
+  }
+}
