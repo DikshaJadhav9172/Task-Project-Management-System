@@ -4,7 +4,6 @@
   padding: 1.5rem;
 }
 
-/* Header */
 .dashboard-container h1 {
   margin: 0 0 1.4rem;
   font-size: 1.4rem;
@@ -12,14 +11,12 @@
   letter-spacing: -0.01em;
 }
 
-/* Grid */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.2rem;
 }
 
-/* Card */
 .dashboard-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -34,15 +31,13 @@
 
   transition: all 0.18s ease;
 }
-
-/* Hover → subtle premium feel */
+/
 .dashboard-card:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-md);
   border-color: rgba(79, 70, 229, 0.2);
 }
 
-/* Icon */
 .card-icon {
   width: 48px;
   height: 48px;
@@ -58,7 +53,7 @@
   font-size: 1.4rem;
 }
 
-/* Content */
+
 .card-content h3 {
   margin: 0;
   font-size: 0.7rem;
@@ -68,7 +63,6 @@
   font-weight: 600;
 }
 
-/* Number (🔥 main highlight) */
 .card-number {
   margin: 0.2rem 0 0;
   font-size: 1.8rem;
@@ -76,7 +70,6 @@
   letter-spacing: -0.02em;
 }
 
-/* Empty state */
 .empty-state {
   margin-top: 1.2rem;
   padding: 1.5rem;
@@ -89,7 +82,6 @@
   color: var(--muted);
 }
 
-/* Spinner */
 .spinner-large {
   width: 42px;
   height: 42px;
