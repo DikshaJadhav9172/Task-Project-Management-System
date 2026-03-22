@@ -8,26 +8,24 @@ import Sidebar from './components/Sidebar';
 import ProtectedRoute from './components/ProtectedRoute';
 import RoleGuard from './components/RoleGuard';
 
-// Auth Pages
 import Login from './pages/auth/Login';
 import Register from './pages/auth/Register';
 
-// Dashboard Pages
 import UserDashboard from './pages/dashboard/UserDashboard';
 import ManagerDashboard from './pages/dashboard/ManagerDashboard';
 
-// Task Pages
+
 import TaskList from './pages/tasks/TaskList';
 import TaskDetails from './pages/tasks/TaskDetails';
 import CreateTask from './pages/tasks/CreateTask';
 import TasksManager from './pages/tasks/TasksManager';
 
-// Project Pages
+
 import ProjectList from './pages/projects/ProjectList';
 import CreateProject from './pages/projects/CreateProject';
 import ProjectDetails from './pages/projects/ProjectDetails';
 
-// Admin Pages
+
 import UserManagement from './pages/admin/UserManagement';
 
 import './App.css';
@@ -57,11 +55,11 @@ const AppContent = () => {
         <Sidebar />
         <div className="page-content">
           <Routes>
-            {/* Auth Routes */}
+            {}
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
 
-            {/* Dashboard Routes */}
+            {}
             <Route 
               path="/dashboard" 
               element={
@@ -71,7 +69,7 @@ const AppContent = () => {
               } 
             />
 
-            {/* User Task Routes */}
+            {}
             <Route 
               path="/tasks" 
               element={
@@ -91,7 +89,7 @@ const AppContent = () => {
               } 
             />
 
-            {/* Manager Task Routes */}
+            {}
             <Route 
               path="/tasks-manager" 
               element={
@@ -113,7 +111,7 @@ const AppContent = () => {
               } 
             />
 
-            {/* Project Routes */}
+            {}
             <Route 
               path="/projects" 
               element={
@@ -145,7 +143,7 @@ const AppContent = () => {
               } 
             />
 
-            {/* Admin Routes */}
+            {}
             <Route 
               path="/admin/users" 
               element={
@@ -157,7 +155,7 @@ const AppContent = () => {
               } 
             />
 
-            {/* Catch All */}
+            {}
             <Route path="/" element={<Navigate to="/dashboard" replace />} />
             <Route path="*" element={<Navigate to="/dashboard" replace />} />
           </Routes>
