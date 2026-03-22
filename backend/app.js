@@ -17,9 +17,6 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'));
 
-// Serve static files from frontend build
-// In Docker: files are at /app/public
-// In development: files are at ../frontend/dist
 const staticPath = process.env.NODE_ENV === 'production' 
   ? path.join(__dirname, 'public')
   : path.join(__dirname, '../frontend/dist');
