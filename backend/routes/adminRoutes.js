@@ -4,7 +4,6 @@ const { authenticateJWT, authorizeRoles } = require('../middleware/authMiddlewar
 
 const router = express.Router();
 
-// ✅ Get users
 router.get(
   '/users',
   authenticateJWT,
@@ -12,7 +11,6 @@ router.get(
   adminController.getUsers
 );
 
-// ✅ Update role
 router.put(
   '/user-role',
   authenticateJWT,
