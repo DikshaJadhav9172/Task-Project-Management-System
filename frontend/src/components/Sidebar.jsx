@@ -34,8 +34,7 @@ const Sidebar = () => {
             Dashboard
           </Link>
         </div>
-
-        {/* User Navigation */}
+        
         {hasRole("User") && (
           <div className="nav-section">
             <p className="nav-title">My Tasks</p>
@@ -49,7 +48,6 @@ const Sidebar = () => {
           </div>
         )}
 
-        {/* Manager Navigation */}
         {(hasRole("Manager") || hasRole("Admin")) && (
           <div className="nav-section">
             <p className="nav-title">Management</p>
@@ -83,7 +81,6 @@ const Sidebar = () => {
           </div>
         )}
 
-        {/* Admin Navigation */}
         {hasRole("Admin") && (
           <div className="nav-section">
             <p className="nav-title">Admin</p>
