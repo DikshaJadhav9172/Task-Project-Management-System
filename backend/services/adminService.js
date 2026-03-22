@@ -1,7 +1,5 @@
 const userRepository = require('../repositories/userRepository');
 
-
-// ✅ GET USERS (with search + role filter)
 async function getAllUsers({ search, role } = {}) {
   let users = await userRepository.findAllUsers();
 
@@ -10,7 +8,6 @@ async function getAllUsers({ search, role } = {}) {
     users = users.filter(u => u.role === role);
   }
 
-  // 🔍 Search by name/email
   if (search) {
     const keyword = search.toLowerCase();
     users = users.filter(u =>
@@ -22,8 +19,6 @@ async function getAllUsers({ search, role } = {}) {
   return users;
 }
 
-
-// ✅ UPDATE ROLE
 async function updateUserRole(userId, role) {
   const user = await userRepository.updateUserRole(userId, role);
 
@@ -37,7 +32,6 @@ async function updateUserRole(userId, role) {
 }
 
 
-// ✅ DELETE USER
 async function deleteUser(userId) {
   const deleted = await userRepository.deleteUser(userId);
 
@@ -47,7 +41,7 @@ async function deleteUser(userId) {
     throw err;
   }
 
-  return true; // optional clarity
+  return true; 
 }
 
 
