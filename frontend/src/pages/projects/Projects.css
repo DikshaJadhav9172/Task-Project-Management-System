@@ -5,7 +5,6 @@
   padding: 1.5rem;
 }
 
-/* Header */
 .projects-header {
   display: flex;
   justify-content: space-between;
@@ -20,21 +19,18 @@
   font-weight: 700;
 }
 
-/* Subtitle */
 .project-subtitle {
   margin-top: 0.25rem;
   font-size: 0.85rem;
   color: var(--muted);
 }
 
-/* Grid */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 1.2rem;
 }
 
-/* Card */
 .project-card {
   position: relative;
   cursor: pointer;
@@ -53,51 +49,43 @@
   transition: all 0.18s ease;
 }
 
-/* Hover */
 .project-card:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-md);
   border-color: rgba(79, 70, 229, 0.2);
 }
 
-/* Click feedback */
 .project-card:active {
   transform: scale(0.98);
 }
 
-/* Keyboard focus (🔥 important) */
 .project-card:focus-visible {
   outline: none;
   box-shadow: var(--ring);
 }
 
-/* Header with arrow */
 .project-card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Arrow */
 .card-arrow {
   color: var(--muted);
   transition: all 0.2s ease;
 }
 
-/* Hover animation */
 .project-card:hover .card-arrow {
   transform: translateX(4px);
   color: var(--primary);
 }
 
-/* Title */
 .project-card h3 {
   margin: 0;
   font-size: 1rem;
   font-weight: 600;
 }
 
-/* Description */
 .project-description {
   margin: 0;
   font-size: 0.9rem;
@@ -110,7 +98,6 @@
   overflow: hidden;
 }
 
-/* Meta */
 .project-meta {
   font-size: 0.85rem;
   color: var(--muted);
@@ -122,7 +109,6 @@
   letter-spacing: 0.08em;
 }
 
-/* Dates */
 .project-dates {
   display: flex;
   justify-content: space-between;
@@ -132,7 +118,6 @@
   padding-top: 0.6rem;
 }
 
-/* Form card */
 .form-card {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -141,21 +126,18 @@
   box-shadow: var(--shadow-sm);
 }
 
-/* Form */
 .form-group label {
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--muted);
 }
 
-/* Actions */
 .form-actions {
   display: flex;
   gap: 0.6rem;
   margin-top: 1rem;
 }
 
-/* Progress */
 .project-progress {
   margin-top: 1.2rem;
   padding: 1.2rem;
@@ -201,7 +183,6 @@
   color: var(--muted);
 }
 
-/* Task cards */
 .task-card {
   cursor: pointer;
 }
@@ -210,7 +191,6 @@
   transform: scale(0.98);
 }
 
-/* Empty */
 .empty-state {
   text-align: center;
   padding: 1.8rem;
@@ -219,7 +199,6 @@
   color: var(--muted);
 }
 
-/* Spinner */
 .spinner {
   width: 38px;
   height: 38px;
