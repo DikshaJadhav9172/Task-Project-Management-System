@@ -1,7 +1,5 @@
 const adminService = require('../services/adminService');
 
-
-// ✅ GET USERS (with search + role filter)
 async function getUsers(req, res, next) {
   try {
     const { search, role } = req.query;
@@ -14,8 +12,6 @@ async function getUsers(req, res, next) {
   }
 }
 
-
-// ✅ UPDATE ROLE
 async function updateUserRole(req, res, next) {
   try {
     const { userId, role } = req.body;
@@ -34,7 +30,7 @@ async function deleteUser(req, res, next) {
   try {
     const userId = req.params.id;
 
-    // 🔒 Prevent self delete (optional but smart)
+   
     if (req.user.id == userId) {
       return res.status(400).json({
         message: "You can't delete yourself"
