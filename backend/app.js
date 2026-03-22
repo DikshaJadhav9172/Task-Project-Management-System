@@ -27,7 +27,6 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use('/api', routes);
 
-// Serve index.html for React Router (SPA fallback)
 app.get('*', (req, res) => {
   const indexPath = path.join(staticPath, 'index.html');
   res.sendFile(indexPath, (err) => {
