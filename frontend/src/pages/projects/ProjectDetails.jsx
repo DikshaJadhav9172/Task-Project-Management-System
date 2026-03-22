@@ -68,14 +68,14 @@ const ProjectDetails = () => {
 
   return (
     <div className="projects-container">
-      {/* 🔥 Back Button */}
+  
       <button className="btn-secondary" onClick={() => navigate('/projects')}>
         <ArrowLeft size={16} />
         Back to Projects
       </button>
 
       <div className="form-card" style={{ marginTop: '1rem' }}>
-        {/* Header */}
+      
         <div className="projects-header">
           <div>
             <h1>{project.name}</h1>
@@ -87,7 +87,7 @@ const ProjectDetails = () => {
           </div>
         </div>
 
-        {/* Dates */}
+        
         <div className="project-dates" style={{ borderTop: 'none' }}>
           <span>
             Start: {project.start_date ? new Date(project.start_date).toLocaleDateString() : '—'}
@@ -97,7 +97,6 @@ const ProjectDetails = () => {
           </span>
         </div>
 
-        {/* Progress */}
         <div className="project-progress">
           <div className="project-progress-row">
             <div>
@@ -132,7 +131,7 @@ const ProjectDetails = () => {
           </div>
         </div>
 
-        {/* Stats Cards */}
+       
         <div className="projects-grid" style={{ marginTop: '1.2rem' }}>
           {[
             { label: 'Total Tasks', value: summary.total },
@@ -147,7 +146,7 @@ const ProjectDetails = () => {
           ))}
         </div>
 
-        {/* Tasks */}
+  
         <div style={{ marginTop: '1.5rem' }}>
           <h3 style={{ marginBottom: '0.75rem' }}>Tasks</h3>
 
@@ -163,7 +162,7 @@ const ProjectDetails = () => {
                   className="project-card task-card"
                   onClick={() => navigate(`/task/${t.id}`)}
                 >
-                  {/* 🔥 clickable hint */}
+                 
                   <div className="project-card-header">
                     <h3>{t.title}</h3>
                     <ArrowRight size={16} className="card-arrow" />
