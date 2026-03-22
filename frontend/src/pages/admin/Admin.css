@@ -1,13 +1,10 @@
-/* =========================
-   CONTAINER
-========================= */
+
 .admin-container {
   max-width: var(--container);
   margin: 0 auto;
   padding: 1.5rem;
 }
 
-/* Page title */
 .admin-container h1 {
   margin: 0 0 1.25rem;
   font-size: 1.45rem;
@@ -15,10 +12,6 @@
   letter-spacing: -0.01em;
 }
 
-
-/* =========================
-   CONTROLS (SEARCH + FILTER)
-========================= */
 .admin-controls {
   display: flex;
   gap: 0.6rem;
@@ -60,9 +53,6 @@
 }
 
 
-/* =========================
-   TABLE WRAPPER
-========================= */
 .users-table-container {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -72,14 +62,12 @@
   position: relative;
 }
 
-/* 🔥 ADD THIS (SCROLL SLIDER) */
 .table-scroll {
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
 
-/* Scrollbar */
 .table-scroll::-webkit-scrollbar {
   height: 6px;
 }
@@ -89,7 +77,6 @@
   border-radius: 10px;
 }
 
-/* Optional swipe hint */
 .table-scroll::after {
   content: "← Swipe →";
   position: absolute;
@@ -101,12 +88,9 @@
 }
 
 
-/* =========================
-   TABLE
-========================= */
 .users-table {
   width: 100%;
-  min-width: 720px; /* 🔥 forces horizontal scroll */
+  min-width: 720px; 
   border-collapse: separate;
   border-spacing: 0;
 }
@@ -115,7 +99,6 @@
   background: transparent;
 }
 
-/* Sticky header (optional but clean) */
 .users-table thead th {
   position: sticky;
   top: 0;
@@ -141,15 +124,11 @@
   white-space: nowrap; /* 🔥 prevents breaking */
 }
 
-/* Row hover */
 .users-table tbody tr:hover {
   background: rgba(79, 70, 229, 0.03);
 }
 
 
-/* =========================
-   ROLE BADGES
-========================= */
 .role-badge {
   padding: 0.25rem 0.55rem;
   border-radius: 999px;
@@ -174,9 +153,6 @@
 }
 
 
-/* =========================
-   SELECT INPUT
-========================= */
 .users-table select {
   padding: 0.45rem 0.6rem;
   border-radius: 10px;
@@ -192,10 +168,6 @@
   border-color: var(--primary);
 }
 
-
-/* =========================
-   ACTION BUTTONS
-========================= */
 .action-buttons-inline {
   display: flex;
   gap: 0.4rem;
@@ -216,7 +188,6 @@
   transition: all 0.15s ease;
 }
 
-/* Hover */
 .btn-edit:hover,
 .btn-save:hover,
 .btn-cancel:hover,
@@ -224,7 +195,6 @@
   background: var(--surface-2);
 }
 
-/* Variants */
 .btn-edit {
   color: var(--primary);
 }
@@ -237,7 +207,6 @@
   color: var(--muted);
 }
 
-/* Delete */
 .btn-delete {
   color: #dc2626;
   border: 1px solid rgba(220, 38, 38, 0.25);
@@ -250,9 +219,6 @@
 }
 
 
-/* =========================
-   EMPTY STATE
-========================= */
 .empty-state {
   text-align: center;
   padding: 2.5rem;
@@ -261,9 +227,6 @@
 }
 
 
-/* =========================
-   SPINNER
-========================= */
 .spinner {
   width: 36px;
   height: 36px;
