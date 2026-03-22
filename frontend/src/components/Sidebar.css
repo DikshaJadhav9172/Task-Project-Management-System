@@ -5,7 +5,7 @@
   left: 0;
   height: calc(100vh - 64px);
 
-  background: #0f172a; /* 🔥 DARK SIDEBAR */
+  background: #0f172a; 
   color: #cbd5f5;
 
   border-right: 1px solid rgba(255,255,255,0.06);
@@ -14,21 +14,18 @@
   z-index: 90;
 }
 
-/* Nav layout */
 .sidebar-nav {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
 }
 
-/* Section */
 .nav-section {
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
 }
 
-/* Section title */
 .nav-title {
   margin: 0.4rem 0.75rem;
   color: rgba(203, 213, 225, 0.5);
@@ -38,7 +35,6 @@
   letter-spacing: 0.12em;
 }
 
-/* Links */
 .nav-link {
   display: flex;
   align-items: center;
@@ -54,13 +50,11 @@
   transition: all 0.15s ease;
 }
 
-/* Hover */
 .nav-link:hover {
   background: rgba(255,255,255,0.06);
   color: #fff;
 }
 
-/* Active (🔥 like your reference UI) */
 .nav-link.active {
   background: var(--primary);
   color: #fff;
@@ -68,7 +62,7 @@
   box-shadow: 0 6px 14px rgba(79, 70, 229, 0.25);
 }
 
-/* Optional: icon spacing fix */
+
 .nav-link span {
   display: inline-flex;
 }
@@ -80,15 +74,13 @@
   }
 }
 
-* 🔥 Fix horizontal scrollbar height */
 .sidebar-nav {
-  scrollbar-width: thin; /* Firefox */
+  scrollbar-width: thin; 
   scrollbar-color: rgba(255,255,255,0.2) transparent;
 }
 
-/* Chrome / Edge / Safari */
 .sidebar-nav::-webkit-scrollbar {
-  height: 5px; /* 🔥 reduce thickness */
+  height: 5px; 
 }
 
 .sidebar-nav::-webkit-scrollbar-track {
@@ -100,12 +92,11 @@
   border-radius: 10px;
 }
 
-/* Optional: hide until hover (super clean) */
 .sidebar-nav::-webkit-scrollbar-thumb:hover {
   background: rgba(255,255,255,0.4);
 }
 
-/* Mobile */
+
 @media (max-width: 768px) {
   .sidebar {
     position: sticky;
