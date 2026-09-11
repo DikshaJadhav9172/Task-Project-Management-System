@@ -80,8 +80,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build \
-            --build-arg VITE_API_URL=${{ secrets.VITE_API_URL }} \
+          docker build 
             -t task-management:${{ github.sha }} .
 
 
